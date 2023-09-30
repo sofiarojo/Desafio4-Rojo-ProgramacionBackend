@@ -17,11 +17,8 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "handlebars");
 
 app.use("/", viewsRouter);
-
-const PORT = 8080;
-
-const httpServer = app.listen(PORT, () => {
-  console.log(`Escuchando al puerto ${PORT}`);
+const httpServer = app.listen(8080, () => {
+  console.log("Escuchando al puerto 8080");
 });
 
 const socketServer = new Server(httpServer);
